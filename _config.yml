@@ -59,5 +59,9 @@ srcset:
   optipng: true
   cache: "/tmp/images"
 
+baseurl: 
+  /po2go
+
+
 exclude:
-  [minima.gemspec, README.md, Gemfile, Gemfile.lock]
+  [minima.gemspec, README.md, Gemfile, Gemfile.lock, img/]
