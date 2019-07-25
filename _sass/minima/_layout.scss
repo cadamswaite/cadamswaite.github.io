@@ -1,0 +1,44 @@
+@include media-query($on-bigphone) {
+  #postbox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .post-link {
+    height:calc(100vw/2);
+  }
+
+  .half-par>picture>img.some-other-class {
+      width: 95%;
+      margin: 0;
+    }
+    .half-par.right>picture>img.some-other-class{
+      display: block;
+      margin-left: auto;
+      justify-content: flex-end;
+      align-self: flex-end;
+    }
+    // .half-par.right>picture>img.some-other-class{
+      
+    // }
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@include media-query($on-tablet) {
+  #postbox {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .post-link {
+    height:calc(100vw/3);
+  }
+}
+
+@include media-query($on-desktop) {
+  #postbox {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .post-link {
+    height:calc(100vw/4);
+  }
+}
