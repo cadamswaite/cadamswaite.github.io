@@ -16,16 +16,14 @@ layout: default
     <a class="post-link" href="{{ post.url | relative_url }}">
     <div class="post">
       {%- if post.img -%}
-      {% picture img/{{ post.img }}  %}
+      {% picture img/{{ post.img }} --alt  {{ post.title | escape }} %}
       {%- endif -%}
 
       <div class="text">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-date">{{ post.date | date: date_format }}</span>
         <h3 class="post-title">
-          
             {{ post.title | escape }}
-          
         </h3>
 
         {%- if site.show_excerpts -%}

@@ -17,7 +17,7 @@ a{
   height:62px;
   padding-top:10px;
   padding-left:20px;
-
+  border-bottom: thin solid black;
 }
 
 .site-title{
@@ -30,23 +30,21 @@ a{
   z-index: 5;
 }
 
-
 // ---------------------- NAV Bar ------------------------
 .site-nav {
   position: absolute;
   top: 0px;
   right: 0px;
   text-align: center;
-  z-index: 2;
+  z-index: 3;
   width: 72px;
   height: 72px;
-  border-left: thin solid black;
+  // border-left: thin solid black;
 
   .nav-trigger {
       display: none;
   }
 
- 
 
   .menu-icon {
     float: right;
@@ -80,23 +78,24 @@ a{
     background: white;
     bottom: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     right: 0;
     top: 0;
-    z-index: -3;
-    padding-bottom: 5px;
-    padding-top:72px;
-
+    z-index: -5;
   }
 
 
   input:checked ~ .trigger {
     display: block;
-    position:fixed;
-    left: 0;
-    height: 100vh;
+    position: absolute;
+    left: calc(72px - 100vw);
+    height: 100%;
     right: 0;
+    top:72px;
+    bottom:0;
+    overflow-y: auto;
+    border-top: thin solid black;
   }
 
 
@@ -104,13 +103,14 @@ a{
     color: black;
     display: block;
     position:relative;
-    padding: 5px 10px;
+    // padding: 5px 10px;
+    font-size: 18px;
+    font-family: "Roboto Slab", serif;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 0;
     }
-    margin-left: 20px;
   }
 
   @media screen and (min-width: $on-tablet) {
