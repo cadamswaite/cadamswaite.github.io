@@ -51,7 +51,13 @@
 html, body {
   padding: 0;
   margin: 0;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
+
+main {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
 
 img {
   max-width: 100%; }
@@ -63,7 +69,8 @@ a {
 .site-header {
   height: 62px;
   padding-top: 10px;
-  padding-left: 20px; }
+  padding-left: 20px;
+  border-bottom: thin solid black; }
 
 .site-title {
   position: absolute;
@@ -79,10 +86,9 @@ a {
   top: 0px;
   right: 0px;
   text-align: center;
-  z-index: 2;
+  z-index: 3;
   width: 72px;
-  height: 72px;
-  border-left: thin solid black; }
+  height: 72px; }
   .site-nav .nav-trigger {
     display: none; }
   .site-nav .menu-icon {
@@ -109,25 +115,27 @@ a {
     background: white;
     bottom: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     right: 0;
     top: 0;
-    z-index: -3;
-    padding-bottom: 5px;
-    padding-top: 72px; }
+    z-index: -5; }
   .site-nav input:checked ~ .trigger {
     display: block;
-    position: fixed;
-    left: 0;
-    height: 100vh;
-    right: 0; }
+    position: absolute;
+    left: calc(72px - 100vw);
+    height: 100%;
+    right: 0;
+    top: 72px;
+    bottom: 0;
+    overflow-y: auto;
+    border-top: thin solid black; }
   .site-nav .page-link {
     color: black;
     display: block;
     position: relative;
-    padding: 5px 10px;
-    margin-left: 20px; }
+    font-size: 18px;
+    font-family: "Roboto Slab", serif; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 0; }
   @media screen and (min-width: 750px) {
@@ -166,8 +174,7 @@ a {
     align-self: flex-end; }
 
   .flex {
-    display: flex;
-    align-items: center; } }
+    display: flex; } }
 @media screen and (min-width: 750px) {
   #postbox {
     grid-template-columns: repeat(3, 1fr); }
@@ -275,3 +282,6 @@ figcaption {
     width: 100%;
     margin-left: auto;
     margin-right: auto; }
+
+.tpage-header {
+  text-align: center; }
