@@ -1,4 +1,4 @@
 <figure class="image">
-  {% picture {{ include.url }}  --alt {{ include.description }} %}
+  {% picture {{ include.url }} --img data-sizes="auto" class="lazyload some-other-class" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  --alt {{ include.description }}  %}
   <figcaption>{{ include.description }}</figcaption>
 </figure>

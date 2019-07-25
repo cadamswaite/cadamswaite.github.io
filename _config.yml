@@ -51,7 +51,7 @@ plugins:
  - jekyll-feed
  - jekyll-seo-tag
  - jekyll-include-cache
- - jekyll_picture_tag
+ - jekyll_picture_tag_local
 
 
 srcset:
@@ -61,6 +61,8 @@ srcset:
 baseurl: 
   /po2go
 
+url:
+  https://cadamswaite.github.io
 
 exclude:
   [minima.gemspec, README.md, Gemfile, Gemfile.lock, img/]
