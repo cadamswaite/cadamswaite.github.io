@@ -48,6 +48,7 @@ header_pages:
 theme: minima
 
 plugins:
+ - github-pages
  - jekyll-feed
  - jekyll-seo-tag
  - jekyll-include-cache
